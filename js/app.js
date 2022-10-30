@@ -4,6 +4,7 @@ const imagenes = document.querySelectorAll('img'); /*querySelectorAll= regresa u
 
 document.addEventListener('DOMContentLoaded', () => {
     eventos();
+    platillos();
 });
 
 
@@ -29,8 +30,16 @@ const botonCerrar = () => {
     cerrarMenu(btnCerrar,overlay);
 }
 
+const observer = new IntersectionObserver((entries,observer)=>{/*Cargar imagenes antes de pasar por ellas */
+    entries.forEach(entry=>{
+        const imagen = entry.target;
+        observer.unobserve(imagen);
+    })
+});
+
 imagenes.forEach(imagen=>{
     imagen.src = imagen.dataset.src; 
+    observer.observe(imagen);
 });
 
 const cerrarMenu =(boton,overlay)=>{
@@ -44,4 +53,14 @@ const cerrarMenu =(boton,overlay)=>{
         navegacion.classList.add('ocultar');
         boton.remove();
     }
+}
+
+/*filros */
+
+const platillos = ()=>{
+    let platillosArreglo = [];
+    const platillos = document.querySelectorAll('.platillo')
+
+    platillos.forEach(platillo=> platillosArreglo = [...plaillosArreglo,platillo])/*Cuendo se vaya recorriendo, se mete un platillo en el arreglo*/
+    
 }
