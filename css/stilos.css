@@ -435,6 +435,13 @@ video {
     border:none;
     background-color: var(--rojo);
     color: var(--blanco);
-    font-family: var(--parrafos)
+    height: 3.8rem;
+    position: relative;
+    top: 1rem; 
+}
+
+.precio button:hover{
+    background-color: var(--verde);
+    cursor: pointer;
 }
 
