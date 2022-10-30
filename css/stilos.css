@@ -36,14 +36,11 @@ body {
     width: 95%;
 }
 
-h1,
-h2 {
+h1,h2 {
     font-family: var(--titulos);
 }
 
-h3,
-p,
-a {
+h3,p,a {
     font-family: var(--parrafos);
 }
 
@@ -87,10 +84,12 @@ img {
 }
 
 @keyframes desplazamiento {
+
     /* animacion de la barra de navegacion*/
     0% {
         transform: translatex(100%)
     }
+
     100% {
         transform: translateX(0);
     }
@@ -131,6 +130,14 @@ img {
 .bordes:hover {
     color: var(--verde);
     background-color: var(--blanco);
+}
+
+.btn-rojo{
+    background-color:var(--rojo);
+    font-weight: bold; /*Cambiar estilo de lera*/
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 
@@ -175,6 +182,7 @@ img {
 }
 
 @media(min-width: 768px) {
+
     /* estilo pc*/
     .navegacion a {
         text-align: left;
@@ -259,20 +267,14 @@ img {
     /*Para alinear en el centro*/
 }
 
-
-.texto-encabezado h2{/*Estilo movil.*/
-
-}
-.texto-encabezado h2 {
-    /*Estilo movil*/
-
+.texto-encabezado h2 { /*Estilo movil*/
     color: var(--blanco);
-    font-size: 8rem;
+    font-size: 4rem;
 }
 
 @media(min-width: 768px) {
-    .texto-encabezado {
-        font: size 4rem;
+    .texto-encabezado h2{
+        font-size: 8rem;
     }
 }
 
@@ -282,23 +284,55 @@ video {
 }
 
 
-/*Contenedor nosotros*/
+/*Sobre nosotros*/
 
 .contenedor-nosotros {
-    display: flex;
-    /*Poner la imagen a un lado del texto*/
-    justify-content: space-between;
     padding-top: 5rem;
 }
 
-.texto-nosotros,
-.imagenes-nosotros {
-    flex: 0 0 calc(50% - 1rem);
+@media(min-width: 768px) {
+    .contenedor-nosotros {
+        display: flex; /*Poner la imagen a un lado del texto*/
+        justify-content: space-between;
+    }
+}
+
+.texto-nosotros,.imagenes-nosotros {
+    flex: 0 0 calc(50% - 1rem);/*Flex es la abreviacion de flex-grow, flex-shrink y de flex-basis*/
+
 }
 
 .texto-nosotros .bienvenida {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--verde);
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .texto-nosotros .bienvenida {
+        text-align: left;
+    }
+}
+
+.texto-nosotros h1{
+    font-size: 5rem;
+    text-align: center;
+}
+
+@media(min-width: 768px){
+    .texto-nosotros h1{
+        text-align: left;
+    }
+}
+
+.texto-nosotros p{
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media(min-width: 768px){
+    .texto-nosotros p{  
+        text-align: left;
+    }
 }
 
 .imagenes-nosotros {
@@ -307,11 +341,10 @@ video {
 }
 
 .imagenes-nosotros img {
-    border-radius: 5px;
+    border-radius: 5px; /*Sirve para redondear el borde del elemento*/
 }
 
-.imagen1,
-.imagenes2 {
+.imagen1,.imagenes2 {
     flex: 0 0 calc(50% - 1rem)
 }
 
