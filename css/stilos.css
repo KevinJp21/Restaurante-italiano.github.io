@@ -147,6 +147,11 @@ img {
     font-family: var(--parrafos);
 }
 
+.btn-verde:hover{
+    background-color:var(--rojo);
+    cursor: pointer;
+}
+
 /*Encabezado*/
 
 .contenedor-navegacion {
