@@ -139,7 +139,13 @@ img {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-
+.btn-verde{
+    background-color:var(--verde);
+    border: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-family: var(--parrafos);
+}
 
 /*Encabezado*/
 
@@ -351,3 +357,35 @@ video {
 .imagenes2 img {
     margin-bottom: 1rem;
 }
+
+.menu{
+    padding-top: 4rem;
+}
+
+/*platillos*/
+.texto-platillos{
+    text-align: center;
+    font-size: 5rem;
+}
+
+.botones-platillos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.botones-platillos button{
+    flex:0 0 calc(50% - 1rem);
+    padding: 1rem 3rem;
+}
+
+@media (min-width:768px) {
+    .botones-platillos{
+        display: inline-block;
+    }
+    .botones-platillos button{
+        flex:unset;
+    }
+}
+
+
