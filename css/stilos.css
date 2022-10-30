@@ -259,12 +259,13 @@ img {
     /*Para alinear en el centro*/
 }
 
-<<<<<<< HEAD
+
 .texto-encabezado h2{/*Estilo movil.*/
-=======
+
+}
 .texto-encabezado h2 {
     /*Estilo movil*/
->>>>>>> 2719858c5b9dff86ed9b755f828a61dc809d9256
+
     color: var(--blanco);
     font-size: 8rem;
 }
