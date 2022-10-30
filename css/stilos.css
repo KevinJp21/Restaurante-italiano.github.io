@@ -495,3 +495,32 @@ video {
     }
 }
 
+/*Seccion del chef*/
+
+.chef h2{
+    background-color: var(--rojo);
+    display: inline-block;
+    padding: 1rem 3rem;
+    color: var(--blanco);
+    font-size:4rem;
+}
+
+@media(min-width:768px){
+    .contenido-chef{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contenido-chef .imagen-chef{
+    flex: 0 0 calc(50% - 1rem);
+
+}
+
+.texto-chef h3{
+    font-size: 3rem;
+}
+.texto-chef p{
+    font-size: 2rem;
+}
+
