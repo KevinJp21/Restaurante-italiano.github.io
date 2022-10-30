@@ -445,3 +445,24 @@ video {
     cursor: pointer;
 }
 
+.separador{
+    background-image: url('../assets/img/ensalada.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.contenido-separador{
+    padding: 5rem;
+}
+
+.contenido-separador h2{
+    font-size:5rem;
+    color: var(--blanco);
+}
+
+.contenido-separador p{
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
