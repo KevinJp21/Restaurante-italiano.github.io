@@ -600,3 +600,61 @@ video {
     height: 20rem;
     resize: none;
 }
+
+.pie-pagina{
+    background-color:rgb(20,20,20);
+    margin-top:5rem;
+    padding: 5rem;
+}
+
+@media(min-width:768px){ 
+    .contenedor-piepagina{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+.info{
+    flex: 0 0 calc(25% - 1rem);
+    margin-bottom: 2rem;
+}
+
+.info h3, .info p{
+    color:var(--blanco);
+    text-align:center;
+}
+
+.info h3{
+    font-size: 2.2rem;
+}
+
+.info p{
+    font-size: 1.7rem;
+}
+
+.redes-pie{
+    text-align:center;
+}
+
+.info input[type="email"]{
+    font-family: var(--parrafos);
+    display:inline-block;
+    margin-bottom: 1rem;
+    padding:1rem;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+
+.info input[type="submit"]{
+    padding: 1.5rem wrem;
+    font-size: 2rem;
+}
+
+.footer{
+    text-align: center;
+    background-color:var(--negro);
+    color:var(--blanco);
+    padding: 2rem;
+    font: size 2rem;
+}
