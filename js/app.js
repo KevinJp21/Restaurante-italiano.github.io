@@ -61,6 +61,11 @@ const platillos = ()=>{
     let platillosArreglo = [];
     const platillos = document.querySelectorAll('.platillo')
 
-    platillos.forEach(platillo=> platillosArreglo = [...plaillosArreglo,platillo])/*Cuendo se vaya recorriendo, se mete un platillo en el arreglo*/
+    platillos.forEach(platillo=> platillosArreglo = [...platillosArreglo,platillo]);/*Cuendo se vaya recorriendo, se mete un platillo en el arreglo*/
+    const ensaladas = platillosArreglo.filter(ensalada=> ensalada.getAttribute('data-platillo')==='ensalada');
+    const pastas = platillosArreglo.filter(pasta=>pasta.getAttribute('data-platillo')==='pasta');
+    const pizzas = platillosArreglo.filter(pizza=>pizza.getAttribute('data-platillo')==='pizza');
+    const postres = platillosArreglo.filter(postre=>postre.getAttribute('data-platillo')=='postre'); 
     
+    console.log(postres);
 }

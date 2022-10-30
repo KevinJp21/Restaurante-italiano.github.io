@@ -378,13 +378,15 @@ video {
     flex:0 0 calc(50% - 1rem);
     padding: 1rem 3rem;
 }
-
+/*Ubicacion botones*/
 @media (min-width:768px) {
     .botones-platillos{
         display: inline-block;
     }
-    .botones-platillos button{
+    .botones-platillos button:first-child{
         flex:unset;
+        margin-left: 25rem;
+        
     }
 }
 
