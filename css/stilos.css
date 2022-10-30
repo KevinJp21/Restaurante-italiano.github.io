@@ -1,0 +1,245 @@
+:root {
+    --verde:#00A149;
+    --blanco: #fff;
+    --rojo: #881014;
+    --negro: #000;
+    --titulos: 'Arima Madurai', cursive;
+    /* si no carga una fuente, cargara la otra.*/
+    --parrafos: 'Mulish', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    /*1 rem = 10px*/
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    overflow-x: hidden; /*Sirve para ocultar el scroll*/
+}
+
+*,*::after,*::before {
+    box-sizing: inherit;
+    /*respeta los pixeles asignados a la caja */
+}
+
+/*Globales*/
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 95%;
+}
+
+h1,h2{
+    font-family:var(--titulos);
+}
+
+h3,p,a{
+    font-family: var(--parrafos);
+}
+
+.verde{
+    color: var(--verde);
+}
+
+.rojo{
+    color: var(--rojo);
+}
+
+.ocultar{
+    display: none;/*Ocultaar navegacion*/
+}
+
+.btn-cerrar{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:var(--blanco);
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    user-select: none; /*es para que el exto no se seleccione*/
+}
+
+.pantalla-completa{
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 4; /*Sirve para sobre poner elementos y para poder usarlo se tiene que asignar una posicion*/
+}
+
+@keyframes desplazamiento { /* animacion de la barra de navegacion*/
+    0%{
+        transform: translatex(100%  )
+
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.btn-cerrar:hover{
+    cursor: pointer; /*Al pasar el cursor por el botos, este cambiará a la mano*/
+}
+
+.btn{ /*Boton inicio*/
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 1rem 5rem;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+@media(min-width: 768px){
+    .btn{
+        font-size: 2.2rem;
+    }
+}
+
+.bordes{
+    border: 3px solid var(--blanco);
+}
+
+@media(min-width: 768px){
+    .bordes{
+        border: 4px solid var(--blanco);
+    }
+}
+
+.bordes:hover{
+    color:var(--verde);
+    background-color: var(--blanco);
+}
+
+/*Encabezado*/
+.contenedor-navegacion {
+    background-color: var(--negro);
+    position: relative;
+    z-index: 5;
+}
+
+.contenido-navegacion {
+    display: flex;
+    /*Alinear contenido*/
+    align-items: center;
+    /*Alinea elemento*/
+    justify-content: space-between;
+}
+
+.logo h2, .navegacion a{ /*Color texto encabezado*/
+    color: var(--blanco);
+}
+
+.logo h2{
+    font-size: 3rem;
+}
+
+.navegacion a{ /*Estilo mobile*/
+    text-decoration: none;/*quitar lineas debajo del texto*/
+    font-size: 2rem;
+    padding: 1.5rem;
+    padding-left: 4rem;
+    display: block; /*Display inline= un objeto al lado del otro y display block= un objeto debajo del otro*/
+    transition: color .3s ease-in-out; /*Animacion al pasar el cursor por el texto*/
+    text-align: center;
+}
+
+@media(min-width: 768px){ /* estilo pc*/
+    .navegacion a{
+        text-align: left;
+    }
+}
+
+
+
+.navegacion a:nth-child(even):hover{/*Lo que se lon ponga de paramentro los hacer para los demas elementos de navegacion. even = par, hover= al pasar el cursor*/
+    color: var(--rojo);
+} 
+
+.navegacion a:nth-child(odd):hover{/*Lo que se lon ponga de paramentro los hacer para los demas elementos de navegacion. odd = impar, hover= al pasar el cursor*/
+    color: var(--verde);
+} 
+.navegacion a:first-of-type{
+    margin-top: 5rem;
+}
+
+.navegacion{
+    position: absolute; /*position= sirve para posicionar elementos*/
+    top: 0;
+    right: 0;
+    bottom: 0; /*toma todo el espacio en la posicion asignada*/
+    height: 100vh;
+    width: 50rem;
+    padding: 3rem 4rem;
+    background-color: var(--negro);
+    animation: desplazamiento .5s ease-in-out;
+}
+
+@media(min-width: 768px){
+    .navegacion{
+        width: 40rem;
+    } 
+}
+
+
+.hamburguesa:hover{
+    cursor:pointer;
+}
+
+.hamburguesa span{
+    background-color: var(--blanco);
+    display: block; /*Para poder cambiar el tamaño, el objeto tiene que ser de tipo bloque*/
+    width: 5rem;
+    height: .5rem;
+    margin-bottom: .5rem; /*Espacio entre las barras*/
+}
+
+/*Video*/
+.contenido-header{
+    position:relative;
+}
+
+.contenido-header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0, 0, 0, 0.5)
+}
+
+.texto-encabezado{
+    position:absolute;
+    z-index:2; /*Para seleccionar el texto*/
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;/*Para alinear en el centro*/
+
+}
+
+.texto-encabezado h2{/*Estilo movil*/
+    color: var(--blanco);
+    font-size: 4rem;
+}
+
+@media(min-width: 768px){
+    .texto-encabezado h2{
+        font: size 8rem;
+    }
+
+}
+
+video{
+    width: 100%;
+    height: 100%;
+}
