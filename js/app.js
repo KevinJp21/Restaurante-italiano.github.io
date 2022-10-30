@@ -111,3 +111,4 @@ const limpiarHtml = (contenedor)=>{/*Limpiar los platillos que no coincidad con 
         contenedor.removeChild(contenedor.firstChild);
     }
 }
+

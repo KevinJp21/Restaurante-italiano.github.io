@@ -407,8 +407,23 @@ video {
 .platillo{
     flex:0 0 calc(33.3% - 1rem);
     border: 1px solid #e1e1e1;
-    padding: 2rem;
-    border-radius: 5px;
+    padding: .1rem;
+
+    
+}
+
+.platillo img.zoom{
+    border-radius: 4px;
+    
+
+}
+
+.zoom{
+    transition: transform .2s;
+}
+
+.zoom:hover{
+    transform: scale(1.08);
 }
 
 .platillo h2{
@@ -421,7 +436,7 @@ video {
 
 .precio{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 .precio p{
@@ -658,3 +673,4 @@ video {
     padding: 2rem;
     font: size 2rem;
 }
+
