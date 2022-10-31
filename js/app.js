@@ -32,10 +32,13 @@ btnChef.addEventListener('click',()=>{
 btnContacto.addEventListener('click',()=>{
     navegacion.classList.add('ocultar');     
 });
+
+
 document.addEventListener('DOMContentLoaded', () => {
     eventos();
     platillos();
 });
+
 
 const eventos = () => {
     menu.addEventListener('click', abrirMenu);
