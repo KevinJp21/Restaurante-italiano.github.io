@@ -7,13 +7,35 @@ const btnPasta = document.querySelector('.pasta');
 const btnPizza = document.querySelector('.pizza');
 const btnPostres = document.querySelector('.postres');
 const contenedorPlatillos = document.querySelector('.platillos');
+const btnInicio = document.querySelector('.inicio');
+const btnNosotros = document.querySelector('.nosotros');
+const btnMenu = document.querySelector('.menu');
+const btnChef = document.querySelector('.chef');
+const btnContacto = document.querySelector('.contacto');
 
+btnInicio.addEventListener('click',()=>{
+    navegacion.classList.add('ocultar');     
+});
 
+btnNosotros.addEventListener('click',()=>{
+    navegacion.classList.add('ocultar');     
+});
+
+btnMenu.addEventListener('click',()=>{
+    navegacion.classList.add('ocultar');     
+});
+
+btnChef.addEventListener('click',()=>{
+    navegacion.classList.add('ocultar');     
+});
+
+btnContacto.addEventListener('click',()=>{
+    navegacion.classList.add('ocultar');     
+});
 document.addEventListener('DOMContentLoaded', () => {
     eventos();
     platillos();
 });
-
 
 const eventos = () => {
     menu.addEventListener('click', abrirMenu);
@@ -25,16 +47,10 @@ const abrirMenu = () => {
 
 const botonCerrar = () => {
     const btnCerrar = document.createElement('p'); /*btnCerrar = a un parrafo*/
-    const overlay = document.createElement('div');
-    overlay.classList.add('pantalla-completa');
-    const body = document.querySelector('body'); // para cubrir toda la web, es decir, el cuerpo
-    if (document.querySelectorAll('.pantalla-completa').length > 0) return; /*Para solo generear un overlay */
-    body.appendChild(overlay);
     btnCerrar.textContent = 'x';//Crear boton
     btnCerrar.classList.add('btn-cerrar');
-
     navegacion.appendChild(btnCerrar);
-    cerrarMenu(btnCerrar, overlay);
+    cerrarMenu(btnCerrar);
 }
 
 const observer = new IntersectionObserver((entries, observer) => {/*Cargar imagenes antes de pasar por ellas */
@@ -51,17 +67,12 @@ imagenes.forEach(imagen => {
     observer.observe(imagen);
 });
 
-const cerrarMenu = (boton, overlay) => {
+const cerrarMenu = (boton) => {
     boton.addEventListener('click', () => {
         navegacion.classList.add('ocultar')
-        overlay.remove();
         boton.remove();
     })
-    overlay.onclick = function () {
-        overlay.remove();
-        navegacion.classList.add('ocultar');
-        boton.remove();
-    }
+  
 }
 
 /*filros */

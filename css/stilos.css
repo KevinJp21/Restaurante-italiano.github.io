@@ -72,17 +72,6 @@ img {
     /*es para que el exto no se seleccione*/
 }
 
-.pantalla-completa {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 4;
-    /*Sirve para sobre poner elementos y para poder usarlo se tiene que asignar una posicion*/
-}
-
 @keyframes desplazamiento {
 
     /* animacion de la barra de navegacion*/
@@ -251,11 +240,11 @@ img {
 
 /*Video*/
 
-.contenido-header {
+.contenido-inicio {
     position: relative;
 }
 
-.contenido-header::before {
+.contenido-inicio::before {
     content: '';
     position: absolute;
     top: 0;
@@ -265,7 +254,7 @@ img {
     background-color: rgba(0, 0, 0, 0.5)
 }
 
-.texto-encabezado {
+.texto-inicio {
     position: absolute;
     z-index: 2;
     /*Para seleccionar el texto*/
@@ -278,18 +267,19 @@ img {
     /*Para alinear en el centro*/
 }
 
-.texto-encabezado h2 { /*Estilo movil*/
+.texto-inicio h2 { /*Estilo movil*/
     color: var(--blanco);
     font-size: 4rem;
 }
 
 @media(min-width: 768px) {
-    .texto-encabezado h2{
+    .texto-inicio h2{
         font-size: 8rem;
     }
 }
 
 video {
+    margin-top: 3rem;
     width: 100%;
     height: 100%;
 }
@@ -674,3 +664,14 @@ video {
     font: size 2rem;
 }
 
+.encabezado { /*Fijar encabezado*/
+	background: #333;
+	color: white;
+	height: 80px;
+	
+	width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+    z-index: 3;
+}

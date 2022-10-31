@@ -27,11 +27,13 @@
                     <!--Span= selecciona texto para darle estilo-->
                 </div>
                 <nav class="navegacion ocultar">
-                    <a href="#">Inicio</a>
-                    <a href="#">Sobre Nosotros</a>
-                    <a href="#">Menú</a>
-                    <a href="#">Chef</a>
-                    <a href="#">Contacto</a>
+                    
+                    <a class="inicio btn" href="http://127.0.0.1:5500/index.html#inicio">Inicio</a>
+                    <a class="nosotros btn" href="http://127.0.0.1:5500/index.html#sobre nosotros">Sobre Nosotros</a>
+                    <a class="menu btn" href="http://127.0.0.1:5500/index.html#menu">Menú</a>
+                    <a class="chef btn" href="http://127.0.0.1:5500/index.html#chef">Chef</a>
+                    <a class="contacto btn" href="http://127.0.0.1:5500/index.html#contacto">Contacto</a>
+                
                 </nav>
                 <div class="hamburguesa">
                     <span></span><span></span><span></span>
@@ -39,9 +41,10 @@
                 </div>
             </div>
         </div>
+        </header>
         <div class="contenido-header">
-            <div class="contenedor-encabezado">
-                <div class="texto-encabezado">
+            <div class="contenedor-inicio">
+                <div id="inicio" class="texto-inicio">
                     <h2>Accoglienza!</h2>
                     <a href="#" class="btn bordes">Il nostro menú</a>
                 </div>
@@ -51,10 +54,10 @@
                 </video>
             </div>
         </div>
-    </header>
-    <div class="contenedor-nosotros contenedor">
-        <div class="texto-nosotros">
-            <p class="bienvenida">Bienvenido a!</p>
+    
+    <div id="sobre nosotros" class="contenedor-nosotros contenedor">
+        <div  class="texto-nosotros">
+            <p  class="bienvenida" >Bienvenido a!</p>
             <h1>Ristorante Turilli</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, nostrum debitis. Laborum nulla,
                 maxime esse iure atque unde voluptatum earum cupiditate, sit numquam in, provident vitae
@@ -65,19 +68,19 @@
         </div>
         <div class="imagenes-nosotros">
             <div class="imagen1">
-                <img data-src="assets/img/nosotros1.webp" alt="mujer comiendo pizza">
+                <img  data-src="assets/img/nosotros1.webp" alt="mujer comiendo pizza">
                 <!--Data=son atributos para agregar informacion extra, para luego poder filtrarlos-->
             </div>
             <div class="imagenes2">
                 <img data-src="assets/img/nosotros2.webp" alt="mujeres comiendo pizza">
-                <img data-src="assets/img/nosotros3.webp" alt="plato con pasta">
+                <img  data-src="assets/img/nosotros3.webp" alt="plato con pasta">
             </div>
         </div>
     </div>
 
-    <section class="menu contenedor">
+    <section id="menu"class="menu contenedor">
         <!--al usar un section, el primer hijo debe ser un heading -->
-        <h2 class="texto-platillos">Platillos populares</h2>
+        <h2  class="texto-platillos">Platillos populares</h2>
         <div class="botones-platillos">
             <button class="todos btn btn-verde">Todods</button>
             <button class="ensaladas btn btn-verde">Ensaladas</button>
@@ -204,11 +207,11 @@
         <div class="contenido-separador contenedor">
             <h2>Comida italiana para empeza el dia</h2>
             <p>Empieza tu dia comiendo deliciosa comida o un café italiano</p>
-            <a href="#" class="btn btn-verde">Ordenar ahora</a>
+            <a id="chef" href="#" class="btn btn-verde">Ordenar ahora</a>
         </div>
     </div>
     <section class="chef contenedor">
-        <h2>Chef ejecutivo</h2>
+        <h2 >Chef ejecutivo</h2>
         <div class="contenido-chef">
             <div class="texto-chef">
                 <h3>La exelencia está en la diversidad y el modo de progresar es conocer y comparar las diversidades de
@@ -217,7 +220,7 @@
                     molestiae impedit, tenetur architecto sapiente, distinctio tempore aperiam ex aspernatur officiis
                     est.
                     Iusto quaerat deleniti in?</p>
-                <a href="#" class="btn btn-verde">Leer Bíografia</a>
+                <a id="contacto" href="#" class="btn btn-verde">Leer Bíografia</a>
             </div>
             <div class="imagen-chef">
                 <img data-src="assets/img/chef.webp" alt="foto del chef">
